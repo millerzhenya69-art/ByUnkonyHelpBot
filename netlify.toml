@@ -2,8 +2,6 @@
   base = "."
   command = "pip install -r requirements.txt"
   functions = "netlify/functions"
-  publish = "."
 
-# Suppress secrets scanning for non-secret files that Netlify falsely flags
 [build.environment]
   SECRETS_SCAN_OMIT_KEYS = "DB_PATH"
