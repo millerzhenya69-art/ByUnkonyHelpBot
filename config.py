@@ -12,6 +12,10 @@ ADMIN_IDS: set[int] = {
     if x.strip().isdigit()
 }
 
-DB_PATH = os.getenv("DB_PATH", "support_bot.db")
+# Database path - use default only if not specified in environment
+DB_PATH = os.getenv("DB_PATH") or "support_bot.db"
 MESSAGES_PER_PAGE = 8
 HISTORY_LIMIT = 15
+
+# Webhook configuration for Netlify deployment
+WEBHOOK_URL = os.getenv("WEBHOOK_URL", "")
