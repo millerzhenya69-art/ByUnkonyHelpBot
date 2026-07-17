@@ -4,10 +4,6 @@
   functions = "netlify/functions"
   publish = "."
 
-[functions]
-  directory = "netlify/functions"
-  python_version = "3.11"
-
 # Suppress secrets scanning for non-secret files that Netlify falsely flags
 [build.environment]
   SECRETS_SCAN_OMIT_KEYS = "DB_PATH"
